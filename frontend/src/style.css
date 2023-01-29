@@ -1,0 +1,110 @@
+@media screen and (min-width: 992px) {
+  .sidebar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 15em;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    z-index: 99999999999999999;
+    background: #171717;
+  }
+  .sidebar .logo {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 16px;
+    text-decoration: none;
+  }
+  .sidebar .logo img {
+    width: 60%;
+    max-width: 64px;
+    height: auto;
+    cursor: pointer;
+  }
+  .sidebar .logo h1 {
+    font-size: 20px;
+    font-family: "Inter", sans-serif;
+    color: white;
+    font-weight: 400;
+  }
+  .sidebar .list-items {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 0 2rem 0;
+  }
+  .sidebar .list-items a {
+    text-decoration: none;
+    justify-self: start;
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border-radius: 50%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    font-family: "Inter", sans-serif;
+    font-weight: normal;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 16px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 100%;
+  }
+  .sidebar .list-items a:hover {
+    background: teal;
+  }
+  .sidebar .list-items a:hover i {
+    color: white;
+  }
+  .sidebar .list-items a i {
+    font-size: 2rem;
+    color: #1b1b1b;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .sidebar {
+    display: none !important;
+  }
+}
+/*# sourceMappingURL=style.css.map */

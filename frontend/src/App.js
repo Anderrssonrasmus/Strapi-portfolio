@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 // Page layout
 import Header from "./components/Header";
@@ -7,19 +7,13 @@ import SingleProject from "./pages/SingleProject";
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Header />
-        <Switch>
-          <Route exact path="/">
-            <Homepage />
-          </Route>
-          <Route path="/details/:id">
-            <SingleProject />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
+    <div className="App">
+      <Header />
+      <Routes>
+        <Route exact path="/" element={<Homepage />} />
+        <Route path="/details/:id" element={<SingleProject />} />
+      </Routes>
+    </div>
   );
 }
 

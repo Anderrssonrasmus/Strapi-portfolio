@@ -3,7 +3,7 @@ import React from 'react'
 function SingleProject() {
     return (
         <div>
-            Details
+            <h1>Details</h1>
         </div>
     )
 }
