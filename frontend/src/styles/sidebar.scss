@@ -2,8 +2,8 @@
     .sidebar {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
+        justify-content: flex-start;
+        align-items: flex-start;
         width: 15em;
         height: 100vh;
         position: fixed;
@@ -11,8 +11,10 @@
         left: 0;
         //background: #1b1b1b;
         transition: all 0.2s ease;
-        z-index: 99999999999999999;
+        z-index: 99999;
         background: #171717;
+        padding: 16px;
+        gap: 16px;
 
         .logo {
             width: 100%;
@@ -21,16 +23,18 @@
             justify-content: center;
             gap: 16px;
             text-decoration: none;
+            background: #232323;
+            padding: 16px;
+            border-radius: 16px;
 
             img {
-                width: 60%;
-                max-width: 64px;
+                width: 48px;
                 height: auto;
                 cursor: pointer;
             }
 
             h1 {
-                font-size: 20px;
+                font-size: 16px;
                 font-family: "Inter", sans-serif;
                 color: white;
                 font-weight: 400;
@@ -53,26 +57,43 @@
                 padding: 1rem;
                 border-radius: 50%;
                 transition: all 0.2s ease;
-                font-family: "Inter", sans-serif;
-                font-weight: normal;
                 display: flex;
                 gap: 16px;
                 justify-content: flex-start;
-                align-items: flex-start;
+                align-items: center;
                 width: 100%;
+                position: relative;
+
+                h2 {
+                    font-size: 16px;
+                    font-family: "Inter", sans-serif;
+                    font-weight: normal;
+                    color: #b5b5b5;
+                }
+
+                &:after {
+                    content:"";
+                    position: absolute;
+                    left: -16px;
+                    top: 0;
+                    bottom: 0;
+                    width: 3px;
+                    transition: all 0.2s ease;
+                }
 
 
                 &:hover {
-                    background: teal;
-
+                &:after {
+                    background: white;
+                }
                     i {
                         color: white;
                     }
                 }
 
                 i {
-                    font-size: 2rem;
-                    color: #1b1b1b;
+                    font-size: 1.5rem;
+                    color: #b5b5b5;
                 }
             }
         }

@@ -13,15 +13,15 @@ function Header() {
                 </Link>
                 <div className="list-items">
                     <a href="https://www.linkedin.com/in/rasmus-andersson-raz/" target="_blank">
-                        <i class="fa-regular fa-file-pdf"></i>
+                        <i className="fa-regular fa-file-pdf"></i>
                         <h2>Projects</h2>
                     </a>
                     <a href="https://www.instagram.com/anderrssonrasmus/" target="_blank">
-                        <i className="fab fa-instagram"></i>
+                        <i className="fa-regular fa-user"></i>
                         <h2>About</h2>
                     </a>
                     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=rasmus022.ra@gmail.com" target="_blank">
-                        <i className="far fa-envelope"></i>
+                        <i className="fa-regular fa-envelope-open"></i>
                         <h2>Contact</h2>
                     </a>
                 </div>
