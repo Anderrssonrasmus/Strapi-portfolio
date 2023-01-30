@@ -1,6 +1,5 @@
 .wrapper {
-  height: 100vh;
-  width: 100vw;
+  height: calc(100vh - 32px);
   background: #232323;
   margin-left: var(--sidebar-width);
   padding: 64px;
@@ -20,5 +19,5 @@
 }
 .wrapper .hero h2 {
   font-size: 24px;
-  color: #171717;
+  color: #b5b5b5;
 }/*# sourceMappingURL=homepage.css.map */
