@@ -1,5 +1,6 @@
 .wrapper {
     height: calc(100vh - 32px);
+    width: calc(100% - var(--sidebar-width) - 16px);
     background: #232323;
     margin-left: var(--sidebar-width);
     padding: 64px;
@@ -7,11 +8,14 @@
     border-radius: 16px;
     position: fixed;
 
+    .title {}
+
     .hero {
         img {
             width: 64px;
         }
-        h1{
+
+        h1 {
             font-size: 128px;
             text-transform: uppercase;
             color: white;
@@ -25,4 +29,3 @@
         }
     }
 }
-

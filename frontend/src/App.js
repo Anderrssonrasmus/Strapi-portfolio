@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // Page layout
 import Header from "./components/Header";
 import Homepage from "./pages/Homepage";
+import Projects from "./pages/Projects";
 import SingleProject from "./pages/SingleProject";
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
   window.onload = () => {
     const sidebar = document.querySelector(".sidebar");
     const root = document.querySelector(':root');
-  
+
     // set css variable
     root.style.setProperty('--sidebar-width', sidebar.offsetWidth);
     document.documentElement.style.setProperty('--sidebar-width', sidebar.offsetWidth + "px");
@@ -22,7 +23,8 @@ function App() {
       <Header />
       <Routes>
         <Route exact path="/" element={<Homepage />} />
-        <Route path="/details/:id" element={<SingleProject />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/projects/:id" element={<SingleProject />} />
       </Routes>
     </div>
   );

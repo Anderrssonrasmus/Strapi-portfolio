@@ -1,6 +1,7 @@
 import React from 'react'
 import logo from "../media/logo-vit.svg"
 
+
 function Homepage() {
     return (
         <div className='wrapper'>
@@ -9,7 +10,11 @@ function Homepage() {
                 <h1>Rasmus Andersson</h1>
                 <h2>Wordpress / React</h2>
             </section>
-        </div>
+
+
+        </div >
+
+
     )
 }
 

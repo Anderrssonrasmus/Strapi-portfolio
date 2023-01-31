@@ -24,6 +24,7 @@ function Header() {
                         <i className="fa-regular fa-envelope-open"></i>
                         <h2>Contact</h2>
                     </a>
+                    <Link to="/projects">Click me</Link>
                 </div>
             </section>
 
