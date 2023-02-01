@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 export default function Projects() {
 
-    const { loading, error, data } = useFetch('http://localhost:1338/api/projects?populate=Thumbnail');
+    const { loading, error, data } = useFetch('http://localhost:1338/api/projects?populate=*');
 
     if (loading) return <p>Loading...</p>
     if (error) return <p>Error</p>
@@ -23,11 +23,10 @@ export default function Projects() {
                             <p>{project.attributes.Description.substring(0, 200)}...</p>
 
 
-                            {console.log(project.attributes.Thumbnail.data)}
+                            {console.log(project.attributes.Thumbnail.data.attributes.url)}
 
 
                             <img src={project.attributes.Thumbnail.data} alt="" />
-
                             <Link to={`/projects/${project.id}`}>Read more</Link>
                         </div>
                     ))}
