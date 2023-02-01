@@ -2,11 +2,10 @@ import React from 'react'
 
 function SingleProject() {
     return (
-        <div>
-            <h1>Details</h1>
-        </div>
+        <div className='wrapper'>
+
+        </div >
     )
 }
 
 export default SingleProject;
-
