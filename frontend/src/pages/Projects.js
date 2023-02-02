@@ -1,6 +1,5 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Homepage from "./Homepage";
 import useFetch from '../hooks/useFetch';
 import { Link } from 'react-router-dom';
 
@@ -23,7 +22,7 @@ export default function Projects() {
                             <p>{project.attributes.Description.substring(0, 200)}...</p>
 
 
-                            {console.log(project.attributes.Thumbnail.data.attributes.url)}
+                            {console.log(project.attributes.Thumbnail.data)}
 
 
                             <img src={project.attributes.Thumbnail.data} alt="" />

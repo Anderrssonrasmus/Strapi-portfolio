@@ -1,24 +1,14 @@
 @media screen and (min-width: 992px) {
   .sidebar {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     width: 15em;
     height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
-    -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
     z-index: 99999;
     background: #171717;
@@ -27,15 +17,9 @@
   }
   .sidebar .logo {
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    align-items: center;
+    justify-content: center;
     gap: 16px;
     text-decoration: none;
     background: #232323;
@@ -43,7 +27,7 @@
     border-radius: 16px;
   }
   .sidebar .logo img {
-    width: 48px;
+    width: 30px;
     height: auto;
     cursor: pointer;
   }
@@ -57,19 +41,10 @@
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: end;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
     margin: 0 0 2rem 0;
   }
   .sidebar .list-items a {
@@ -78,18 +53,11 @@
     margin: 0.5rem 0;
     padding: 1rem;
     border-radius: 50%;
-    -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     gap: 16px;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: flex-start;
+    align-items: center;
     width: 100%;
     position: relative;
   }
@@ -106,7 +74,6 @@
     top: 0;
     bottom: 0;
     width: 3px;
-    -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
   }
   .sidebar .list-items a:hover:after {
@@ -120,28 +87,25 @@
     color: #b5b5b5;
   }
 }
-
 @media screen and (max-width: 992px) {
   .sidebar {
     display: none !important;
   }
 }
-
 .wrapper {
   height: calc(100vh - 32px);
   width: calc(100% - var(--sidebar-width) - 16px);
   background: #232323;
-  margin-left: var(--sidebar-width);
   padding: 64px;
   margin: 16px 16px 32px var(--sidebar-width);
   border-radius: 16px;
   position: fixed;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
 }
-
 .wrapper .hero img {
   width: 64px;
 }
-
 .wrapper .hero h1 {
   font-size: 128px;
   text-transform: uppercase;
@@ -149,9 +113,19 @@
   font-weight: bold;
   line-height: 128px;
 }
-
 .wrapper .hero h2 {
   font-size: 24px;
   color: #b5b5b5;
 }
-/*# sourceMappingURL=style.css.map */
+.wrapper::-webkit-scrollbar {
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0);
+}
+.wrapper::-webkit-scrollbar-track {
+  background-color: #232323;
+}
+.wrapper::-webkit-scrollbar-thumb {
+  background-color: #b5b5b5;
+  border: 16px solid #232323;
+  border-radius: 100px;
+}/*# sourceMappingURL=style.css.map */

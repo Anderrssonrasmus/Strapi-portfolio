@@ -28,7 +28,7 @@
             border-radius: 16px;
 
             img {
-                width: 48px;
+                width: 30px;
                 height: auto;
                 cursor: pointer;
             }
@@ -46,7 +46,7 @@
             height: fit-content;
             display: flex;
             flex-direction: column;
-            justify-content: end;
+            justify-content: flex-end;
             align-items: center;
             margin: 0 0 2rem 0;
 

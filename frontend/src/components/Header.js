@@ -1,5 +1,6 @@
 import React from 'react'
-import logo from "../media/logo-vit.svg"
+//import logo from "../media/logo-vit.svg"
+import logo from "../media/Rlogo.svg"
 import { Link } from "react-router-dom"
 import Design from "../media/about.svg"
 
