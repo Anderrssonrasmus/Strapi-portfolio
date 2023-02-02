@@ -1,18 +1,36 @@
+@import "variables";
+
 .wrapper {
     height: calc(100vh - 32px);
     width: calc(100% - var(--sidebar-width) - 16px);
-    background: #232323;
-    padding: 64px;
+    background: $lighter-dark;
+    padding: 24px;
     margin: 16px 16px 32px var(--sidebar-width);
     border-radius: 16px;
     position: fixed;
     overflow-y: auto;
-    scrollbar-gutter: stable;
 
+    .title {
+        font-family: "Inter", sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        color: $white;
+    }
 
-    .title {}
+    .wrapper-inner {
+        background: $dark;
+        padding: 24px;
+        border-radius: 15px;
+        gap: 24px;
+        display: flex;
+        flex-direction: column;
+    }
 
     .hero {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
         img {
             width: 64px;
         }
@@ -20,33 +38,35 @@
         h1 {
             font-size: 128px;
             text-transform: uppercase;
-            color: white;
+            color: $white;
             font-weight: bold;
             line-height: 128px;
         }
 
         h2 {
             font-size: 24px;
-            color: #b5b5b5;
+            color: $light;
         }
     }
 
     $scrollbar-height: 5px;
     $scrollbar-padding: 15px;
 
-&::-webkit-scrollbar {
-    width: calc(32px + 8px);
-	background-color: rgba(255,255,255,0);
-}
+    &::-webkit-scrollbar {
+        width: calc(32px + 4px);
+        background-color: rgba(255, 255, 255, 0);
+        border-radius: 100px;
+    }
 
-&::-webkit-scrollbar-track {
-	background-color: #232323;
-}
+    &::-webkit-scrollbar-track {
+        background-color: $lighter-dark;
+        border-radius: 100px;
+    }
 
-&::-webkit-scrollbar-thumb {
-	background-color: #b5b5b5;
-    border: 16px solid #232323;
-    border-radius: 100px;;
-}
+    &::-webkit-scrollbar-thumb {
+        background-color: $light;
+        border: 16px solid $lighter-dark;
+        border-radius: 100px;
+    }
 
 }

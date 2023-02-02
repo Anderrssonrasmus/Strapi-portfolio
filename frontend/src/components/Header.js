@@ -13,19 +13,19 @@ function Header() {
                     <h1>Rasmus Andersson</h1>
                 </Link>
                 <div className="list-items">
-                    <a href="https://www.linkedin.com/in/rasmus-andersson-raz/" target="_blank">
+                    <Link to="/projects">
                         <i className="fa-regular fa-file-pdf"></i>
                         <h2>Projects</h2>
-                    </a>
-                    <a href="https://www.instagram.com/anderrssonrasmus/" target="_blank">
+                    </Link>
+
+                    <a href="#" target="_blank">
                         <i className="fa-regular fa-user"></i>
                         <h2>About</h2>
                     </a>
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=rasmus022.ra@gmail.com" target="_blank">
+                    <a href="#" target="_blank">
                         <i className="fa-regular fa-envelope-open"></i>
                         <h2>Contact</h2>
                     </a>
-                    <Link to="/projects">Click me</Link>
                 </div>
             </section>
 
