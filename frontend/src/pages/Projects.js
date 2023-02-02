@@ -10,6 +10,7 @@ export default function Projects() {
 
     if (loading) return <p>Loading...</p>
     if (error) return <p>Error</p>
+
     return (
         <div>
             <div className='wrapper'>
@@ -22,10 +23,10 @@ export default function Projects() {
                             <p>{project.attributes.Description.substring(0, 200)}...</p>
 
 
-                            {console.log(project.attributes.Thumbnail.data)}
+                            {(project.attributes.Thumbnail.data === null) ? "" : console.log(project.attributes.Thumbnail.data.attributes.url)}
 
-
-                            <img src={project.attributes.Thumbnail.data} alt="" />
+                            <p>{(project.attributes.Thumbnail.data === null) ? "" : project.attributes.Thumbnail.data.attributes.url}</p>
+                            <img src={(project.attributes.Thumbnail.data === null) ? "" : "http://localhost:1338" + project.attributes.Thumbnail.data.attributes.url} alt="" />
                             <Link to={`/projects/${project.id}`}>Read more</Link>
                         </div>
                     ))}
