@@ -15,8 +15,8 @@ function SingleProject() {
     return (
         <div className='wrapper'>
             <section className='hero'>
-
                 <p className="title"><Link to="/projects" className='title'>Projects</Link> / {data.data.attributes.Title}</p>
+                <h2 className='heading-title'>{data.data.attributes.Title}</h2>
             </section>
         </div >
     )
