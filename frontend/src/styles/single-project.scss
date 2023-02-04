@@ -1,9 +1,78 @@
-.wrapper{
+@import "variables";
 
-h2.heading-title {
-        font-size: 32px;
-        font-family: "Helvetica Neue", sans-serif;
-        font-weight: bold;
-        color: $white;
-}
+.wrapper {
+
+        .heading-box {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                position: sticky;
+
+                div {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 24px;
+                        align-items: center;
+                }
+
+                h2.heading-title {
+                        font-size: 32px;
+                        font-family: "Helvetica Neue", sans-serif;
+                        font-weight: bold;
+                        color: $white;
+                }
+
+                .post-content {
+                        font-family: "Inter", sans-serif;
+                        font-size: 20px;
+                        color: $light;
+                        max-width: 75ch;
+                        grid-column: span 2;
+                        grid-row: 2 / 2;
+                }
+        }
+
+        img {
+                width: 1300px;
+                aspect-ratio: 16 / 9;
+                border-radius: 15px;
+        }
+
+
+
+        .technologies {
+                display: flex;
+
+                .tech {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        gap: 16px;
+
+                        img {
+                                height: 64px;
+                                width: 64px;
+                        }
+
+                        div {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 4px;
+
+                                h3 {
+                                        font-family: "Inter", sans-serif;
+                                        color: $white;
+                                        font-size: 20px;
+                                        font-weight: 500;
+                                }
+
+                                p {
+                                        font-family: "Inter", sans-serif;
+                                        color: $light;
+                                        font-size: 14px;
+                                        font-weight: 400;
+                                }
+                        }
+                }
+        }
 }

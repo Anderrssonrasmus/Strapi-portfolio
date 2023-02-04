@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_technology_technologies",
+  "info": {
+    "displayName": "Technology",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Description": {
+      "type": "text"
+    }
+  }
+}

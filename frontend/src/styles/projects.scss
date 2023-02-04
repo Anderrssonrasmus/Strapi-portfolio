@@ -10,7 +10,7 @@
 
         img {
             width: 100%;
-            height: 100%;
+            aspect-ratio: 16 / 9;
             border-radius: 15px;
             object-fit: cover;
         }
@@ -59,12 +59,12 @@
             }
         }
 
-        &:hover .link {
+        &:hover .link-circle {
             opacity: 1;
             pointer-events: all;
         }
 
-        .link {
+        .link-circle {
             opacity: 0;
             pointer-events: none;
             transition: opacity 0.2s ease;
@@ -118,7 +118,7 @@
     }
 }
 
-.older-projects {
+.wrapper-inner-inner {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 24px;
@@ -132,7 +132,7 @@
         img {
             width: 100%;
             border-radius: 15px;
-            height: 100%;
+            aspect-ratio: 16 / 9;
             object-fit: cover;
         }
 
@@ -175,53 +175,60 @@
                     margin-right: 8px;
                 }
             }
-
-            .link {
-                text-decoration: none;
-                color: $white;
-                font-size: 12px;
-                font-family: "Inter", sans-serif;
-                font-weight: 500;
-                padding: 8px 16px;
-                background: $dark;
-                border-radius: 15px;
-                position: relative;
-                background: linear-gradient($dark, $dark) padding-box,
-                    linear-gradient(100deg, $teal, $white, $teal) border-box;
-                background-size: 200%;
-                border-radius: 50em;
-                border: 1px solid transparent;
-                transition: all 0.2s ease;
-                position: relative;
-
-                &:hover {
-                    background-position: 100%;
-
-                    &:after {
-                        opacity: 0.5;
-                        transform: translate(-50%, -50%);
-                        transition: inherit;
-                        background-position: 100%;
-                    }
-                }
-
-                &:after {
-                    content: "";
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    height: 100%;
-                    width: 100%;
-                    background: linear-gradient(to right, $teal, $white, $teal);
-                    background-size: 200%;
-                    opacity: 0;
-                    transition: inherit;
-                    z-index: -1;
-                    filter: blur(24px);
-                    pointer-events: none;
-                }
-            }
         }
+    }
+}
+
+div.wrapper-inner[data-content="empty"] {
+    display: none;
+}
+
+.link {
+    text-decoration: none;
+    color: $white;
+    font-size: 12px;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    padding: 8px 16px;
+    background: $dark;
+    position: relative;
+    background: linear-gradient($dark, $dark) padding-box,
+        linear-gradient(100deg, $teal, $white, $teal) border-box;
+    background-size: 200%;
+    border-radius: 50em;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+    position: relative;
+
+    &[href=""] {
+        display: none;
+    }
+
+    &:hover {
+        background-position: 100%;
+
+        &:after {
+            opacity: 0.5;
+            transform: translate(-50%, -50%);
+            transition: inherit;
+            background-position: 100%;
+        }
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(to right, $teal, $white, $teal);
+        background-size: 200%;
+        opacity: 0;
+        transition: inherit;
+        z-index: -1;
+        filter: blur(24px);
+        pointer-events: none;
     }
 }

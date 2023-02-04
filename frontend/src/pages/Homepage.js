@@ -6,15 +6,11 @@ function Homepage() {
     return (
         <div className='wrapper'>
             <section className='hero'>
-                <img src={logo} alt="" />
+                <img className='logo' src={logo} alt="" />
                 <h1>Rasmus Andersson</h1>
                 <h2>Wordpress / React</h2>
             </section>
-
-
         </div >
-
-
     )
 }
 

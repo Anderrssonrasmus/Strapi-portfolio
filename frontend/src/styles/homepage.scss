@@ -9,6 +9,9 @@
     border-radius: 16px;
     position: fixed;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 
     .title {
         font-family: "Inter", sans-serif;
@@ -31,7 +34,7 @@
         flex-direction: column;
         gap: 24px;
 
-        img {
+        img.logo {
             width: 64px;
         }
 
