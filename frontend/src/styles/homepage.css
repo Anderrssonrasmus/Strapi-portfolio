@@ -7,6 +7,9 @@
   border-radius: 16px;
   position: fixed;
   overflow-y: auto;
+}
+
+.wrapper .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -15,6 +18,61 @@
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 24px;
+}
+
+.wrapper .container img.logo {
+  width: 64px;
+}
+
+.wrapper .container .hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+}
+
+.wrapper .container .hero h1 {
+  font-size: 128px;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: bold;
+  line-height: 128px;
+}
+
+.wrapper .container .hero h2 {
+  font-size: 24px;
+  color: #b5b5b5;
+}
+
+.wrapper .container .textBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+  justify-self: end;
+}
+
+.wrapper .container .textBox h2 {
+  font-size: 24px;
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.wrapper .container .textBox p {
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: #b5b5b5;
+  max-width: 55ch;
 }
 
 .wrapper .title {
@@ -36,34 +94,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-.wrapper .hero {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 24px;
-}
-
-.wrapper .hero img.logo {
-  width: 64px;
-}
-
-.wrapper .hero h1 {
-  font-size: 128px;
-  text-transform: uppercase;
-  color: #ffffff;
-  font-weight: bold;
-  line-height: 128px;
-}
-
-.wrapper .hero h2 {
-  font-size: 24px;
-  color: #b5b5b5;
 }
 
 .wrapper::-webkit-scrollbar {

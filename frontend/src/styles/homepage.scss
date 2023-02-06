@@ -9,9 +9,59 @@
     border-radius: 16px;
     position: fixed;
     overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        img.logo {
+            width: 64px;
+        }
+
+        .hero {
+
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            h1 {
+                font-size: 128px;
+                text-transform: uppercase;
+                color: $white;
+                font-weight: bold;
+                line-height: 128px;
+            }
+
+            h2 {
+                font-size: 24px;
+                color: $light;
+            }
+        }
+
+        .textBox {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            justify-self: end;
+
+            h2 {
+                font-size: 24px;
+                font-family: "Helvetica Neue", sans-serif;
+                font-weight: bold;
+                color: $white;
+            }
+
+            p {
+                font-size: 16px;
+                font-family: "Inter", sans-serif;
+                font-weight: 400;
+                color: $light;
+                max-width: 55ch;
+            }
+        }
+    }
 
     .title {
         font-family: "Inter", sans-serif;
@@ -27,29 +77,6 @@
         gap: 24px;
         display: flex;
         flex-direction: column;
-    }
-
-    .hero {
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-
-        img.logo {
-            width: 64px;
-        }
-
-        h1 {
-            font-size: 128px;
-            text-transform: uppercase;
-            color: $white;
-            font-weight: bold;
-            line-height: 128px;
-        }
-
-        h2 {
-            font-size: 24px;
-            color: $light;
-        }
     }
 
     $scrollbar-height: 5px;

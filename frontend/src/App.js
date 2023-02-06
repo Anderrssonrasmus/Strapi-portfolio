@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Homepage from "./pages/Homepage";
 import Projects from "./pages/Projects";
 import SingleProject from "./pages/SingleProject";
+import About from "./pages/About";
 
 function App() {
 
@@ -21,11 +22,14 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Routes>
-        <Route exact path="/" element={<Homepage />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/projects/:id" element={<SingleProject />} />
-      </Routes>
+      <div className='wrapper'>
+        <Routes>
+          <Route exact path="/" element={<Homepage />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/:id" element={<SingleProject />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </div>
     </div>
   );
 }

@@ -15,18 +15,16 @@ function SingleProject() {
 
 
     return (
-        <div className='wrapper'>
-            <section className='hero'>
-                <p className="title"><Link to="/projects" className='title'>Projects</Link> / {data.data.attributes.Title}</p>
-                <div className="heading-box">
-                    <div>
-                        <h2 className='heading-title'>{data.data.attributes.Title}</h2>
-                        <Link to={data.data.attributes.Link} className="link" target="_blank">Visit page</Link>
-                    </div>
-                    <p className='post-content'>{data.data.attributes.Description}</p>
+        <div className="container">
+            <p className="title"><Link to="/projects" className='title'>Projects</Link> / {data.data.attributes.Title}</p>
+            <div className="heading-box">
+                <div>
+                    <h2 className='heading-title'>{data.data.attributes.Title}</h2>
+                    <Link to={data.data.attributes.Link} className="link" target="_blank">Visit page</Link>
                 </div>
-                <img src={(data.data.attributes.Thumbnail2.data === null) ? "" : "http://localhost:1338" + data.data.attributes.Thumbnail2.data.attributes.url} alt="" />
-            </section>
+                <p className='post-content'>{data.data.attributes.Description}</p>
+            </div>
+            <img className='projectImage' src={(data.data.attributes.Thumbnail2.data === null) ? "" : "http://localhost:1338" + data.data.attributes.Thumbnail2.data.attributes.url} alt="" />
 
             <div className="wrapper-inner" data-content={(data.data.attributes.Technology.length === 0) ? "empty" : ""}>
                 <p className="title">Technologies used</p>
@@ -43,7 +41,7 @@ function SingleProject() {
                     ))}
                 </div>
             </div>
-        </div >
+        </div>
     )
 }
 

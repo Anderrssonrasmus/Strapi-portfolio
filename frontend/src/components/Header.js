@@ -18,14 +18,14 @@ function Header() {
                         <h2>Projects</h2>
                     </Link>
 
-                    <a href="#" target="_blank">
+                    <Link to="/about">
                         <i className="fa-regular fa-user"></i>
                         <h2>About</h2>
-                    </a>
-                    <a href="#" target="_blank">
+                    </Link>
+                    <Link to="/">
                         <i className="fa-regular fa-envelope-open"></i>
                         <h2>Contact</h2>
-                    </a>
+                    </Link>
                 </div>
             </section>
 
