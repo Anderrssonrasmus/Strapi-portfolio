@@ -6,6 +6,7 @@ import Homepage from "./pages/Homepage";
 import Projects from "./pages/Projects";
 import SingleProject from "./pages/SingleProject";
 import About from "./pages/About";
+import { motion as m } from "framer-motion"
 
 function App() {
 

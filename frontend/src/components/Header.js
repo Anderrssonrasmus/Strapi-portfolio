@@ -7,7 +7,7 @@ import Design from "../media/about.svg"
 function Header() {
     return (
         <div className='site-header'>
-            <section className="sidebar">
+            <nav className="sidebar">
                 <Link to="/" className="logo">
                     <img src={logo} />
                     <h1>Rasmus Andersson</h1>
@@ -27,7 +27,7 @@ function Header() {
                         <h2>Contact</h2>
                     </Link>
                 </div>
-            </section>
+            </nav>
 
         </div>
     )

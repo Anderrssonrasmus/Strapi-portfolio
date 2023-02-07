@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from "../media/logo-vit.svg"
+import { motion as m } from "framer-motion"
 
 
 function Homepage() {
