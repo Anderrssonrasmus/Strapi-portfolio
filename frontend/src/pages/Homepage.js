@@ -1,6 +1,5 @@
 import React from 'react'
 import logo from "../media/logo-vit.svg"
-import { motion as m } from "framer-motion"
 
 
 function Homepage() {
@@ -11,8 +10,8 @@ function Homepage() {
                 <h2>Wordpress / React</h2>
             </div>
             <div className="textBox">
-                <h2>I build stylistic digital products.</h2>
-                <p>I am a digital designer, creator and developer from Sundsvall Sweden, specializing in headless web development, and web apps.</p>
+                <h2>I build digital products.</h2>
+                <p></p>
             </div>
         </section>
     )
