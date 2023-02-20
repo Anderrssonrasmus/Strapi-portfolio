@@ -20,3 +20,8 @@ body {
     src: url(fonts/Helvetica\ Neue\ Regular.otf);
     font-weight: normal;
 }
+
+@font-face {
+    font-family: "Avant Garde";
+    src: url(fonts/Roobert-SemiBold.ttf);
+}

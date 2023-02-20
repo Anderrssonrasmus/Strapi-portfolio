@@ -6,6 +6,7 @@ import Homepage from "./pages/Homepage";
 import Projects from "./pages/Projects";
 import SingleProject from "./pages/SingleProject";
 import About from "./pages/About";
+import GsapTest from "./pages/GsapTest";
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/projects/:id" element={<SingleProject />} />
           <Route path="/about" element={<About />} />
+          <Route path="/gsap" element={<GsapTest/>} />
         </Routes>
       </div>
     </div>

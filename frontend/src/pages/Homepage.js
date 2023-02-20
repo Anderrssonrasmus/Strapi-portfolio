@@ -1,8 +1,22 @@
-import React from 'react'
+import React, { useLayoutEffect } from 'react'
 import logo from "../media/logo-vit.svg"
-
+import  { useEffect } from "react"
+import { gsap } from "gsap"
 
 function Homepage() {
+
+    useLayoutEffect(() => {
+        gsap.fromTo(".hero", {
+            y: 10, 
+            opacity: 0,
+       }, {
+            y: 0,
+            opacity: 1,
+            delay: 0.75
+
+       })
+    })
+
     return (
         <section className='container'>
             <div className="hero">
