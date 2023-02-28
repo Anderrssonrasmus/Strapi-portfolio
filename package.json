@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "date-fns": "^2.29.3",
+    "gsap": "^3.11.4",
     "luxon": "^3.2.1"
   }
 }
