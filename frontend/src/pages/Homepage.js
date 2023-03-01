@@ -17,12 +17,11 @@ function Homepage() {
         })
 
         gsap.fromTo(".hero h1:nth-child(2)", {
-            filter: 'blur(0px)',
             y: 10,
             opacity: 0,
         }, {
             y: 0,
-            opacity: 1,
+            opacity: 0.2,
             filter: 'blur(3px)',
             delay: 1.5
         })
