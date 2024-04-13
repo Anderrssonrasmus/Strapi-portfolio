@@ -9,14 +9,14 @@ import ProjectLarge from '../components/ProjectLarge';
 
 export default function Projects() {
 
-    const { loading, error, data, data2 } = useFetch('http://localhost:1338/api/projects?populate=*&sort=DateFinished:desc&pagination[limit]=2', 'http://localhost:1338/api/projects?populate=*&sort=DateFinished:desc&pagination[start]=2');
+    const { loading, error, data, data2 } = useFetch(/*'http://localhost:1338/api/projects?populate=*&sort=DateFinished:desc&pagination[limit]=2'*/'http://localhost:1338/api/projects?populate=*&filters[Pinned]=true', 'http://localhost:1338/api/projects?populate=*&sort=DateFinished:desc&pagination[start]=2');
 
     if (loading) return <p>Loading...</p>
     if (error) return <p>Error</p>
 
     return (
         <div className='container'>
-            <p className="title">Latest Projects</p>
+            <p className="title">Featured Projects</p>
             <div className="recent-projects">
                 {data.data.map((project) => (
                     /*
@@ -33,7 +33,7 @@ export default function Projects() {
                         idKey={project.id}
                         imgData={project.attributes.Thumbnail2.data}
                         date={project.attributes.DateFinished}
-                        title={project.attributes.title}
+                        title={project.attributes.Title}
                     />
                 ))}
             </div>

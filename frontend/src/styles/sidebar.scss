@@ -72,7 +72,18 @@
                 }
 
                 &:after {
-                    content:"";
+                    content: "";
+                    position: absolute;
+                    left: -16px;
+                    top: 0;
+                    bottom: 0;
+                    width: 3px;
+                    transition: all 0.2s ease;
+                }
+
+                &.currentPage:after {
+                    background: white;
+                    content: "";
                     position: absolute;
                     left: -16px;
                     top: 0;
@@ -83,9 +94,10 @@
 
 
                 &:hover {
-                &:after {
-                    background: white;
-                }
+                    &:after {
+                        background: white;
+                    }
+
                     i {
                         color: white;
                     }

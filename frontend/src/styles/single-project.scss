@@ -17,8 +17,8 @@
 
                 h2.heading-title {
                         font-size: 32px;
-                        font-family: "Helvetica Neue", sans-serif;
-                        font-weight: bold;
+                        font-family: "Inter", sans-serif;
+                        font-weight: 500;
                         color: $white;
                 }
 
@@ -32,12 +32,23 @@
                 }
         }
 
-        .projectImage {
-                width: 1300px;
-                aspect-ratio: 16 / 9;
-                border-radius: 15px;
+        .contentWrapper {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                grid-gap: 20px;
         }
 
+        .projectImage {
+                width: 100%;
+                aspect-ratio: 16 / 9;
+                border-radius: 15px;
+                grid-column: 1 / 5;
+        }
+
+        .wrapper-inner {
+                grid-column: 5 / 6;
+                height: fit-content;
+        }
 
 
         .technologies {

@@ -4,7 +4,7 @@
   "info": {
     "singularName": "project",
     "pluralName": "projects",
-    "displayName": "project",
+    "displayName": "Project",
     "description": ""
   },
   "options": {
@@ -35,16 +35,14 @@
         "audios"
       ]
     },
-    "Technology": {
-      "type": "component",
-      "repeatable": true,
-      "component": "technology.technology"
+    "technologies": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::technology.technology"
     },
-    "test": {
-      "type": "dynamiczone",
-      "components": [
-        "technology.technology"
-      ]
+    "Pinned": {
+      "type": "boolean",
+      "required": true
     }
   }
 }
